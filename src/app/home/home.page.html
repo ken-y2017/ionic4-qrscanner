@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>QR Scanner</ion-title>
+    <ion-buttons slot="primary" *ngIf="isOpen">
+      <ion-button slot="icon-only" (click)="closeScanner()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

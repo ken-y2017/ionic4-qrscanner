@@ -46,4 +46,14 @@ export class HomePage {
       .catch((e: any) => console.error(e));
   }
 
+  async closeScanner() {
+    try {
+      const status = await this.qrScanner.destroy();
+      console.log('destroy status', status);
+      this.isOpen = false;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
 }
